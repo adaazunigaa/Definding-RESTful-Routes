@@ -12,7 +12,21 @@
 -Express Post Routes
 -Parsing the request body
 -Intro to REST
+    *Representational State Transfer
+    *REST is an "architectural style for distributed hypermedia systems"
+    *A set of guidelines for how a client + server should communicate and perform CRUD operation on  a given resourse.
+
+        -The main idea of REST is treating data on the server side as resources that can be CRUDed
+        -The most common way of approaching REST is in formatting the URLs and HTTP verbs in your applications
 -RESTfull comments index
+    NAME       PATH                 VERB        PURPOSE
+    Index      /comments            GET         Dispaly all comments
+    New        /comments/new        GET         Form to create a new comment
+    Create     /comments            POST        Creates a new comment on server
+    Show       /comments/:id        GET         Details for one specific comment
+    Edit       /comments/:id/edit   GET         Form to edit specific comment   
+    Update     /commnets/:id        PATCH       Updates specific comment on server
+    Destroy    /comments/:id        DELETE      Deletes specific item on server
 -RESTful comments NEW
 -Express redirects
 -RESTful comments show
