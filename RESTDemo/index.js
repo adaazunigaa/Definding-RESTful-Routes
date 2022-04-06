@@ -10,26 +10,37 @@ app.set("view engine", "ejs");
 
 const comments = [
     {
-        userName: "Tod",
-        commnet: "lol that is so funny"
+        username: "Tod",
+        comment: "lol that is so funny"
     },
     {
-        userName: "Sky",
-        commnet: "I love dogs"
+        username: "Sky",
+        comment: "I love dogs"
     },
     {
-        userName: "sk8erBoyy",
-        commnet: "Pls delete that... so boring"
+        username: "sk8erBoyy",
+        comment: "Pls delete that... so boring"
     },
     {
-        userName: "IsyaWoofWoof",
-        commnet: "woOf woOf woOf woOf!!"
+        username: "IsyaWoofWoof",
+        comment: "woOf woOf woOf woOf!!"
     },
 ];
 
 
 app.get("/comments", (req, res) => {
     res.render("comments/index.ejs", {comments});
+});
+
+app.get("/comments/new", (req, res)=>{
+    res.render("comments/new.ejs");
+});
+
+app.post("/comments", (req,res) => {
+     console.log(req.body);
+    const {username, comment} = req.body;
+    comments.push({username, comment});
+    res.send("COMMENT SUBMITED");
 });
 
 app.get("/tacos", (req, res) => {
