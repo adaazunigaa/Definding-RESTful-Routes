@@ -1,12 +1,15 @@
 const express = require("express");
 const app = express();
 const path = require("path");
+const methodOverride = require("method-override");
 const { v4: uuid } = require('uuid');
 uuid(); 
+
 
 // app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
+app.use(methodOverride('_method'));
 app.set("views", path.join(__dirname, "views"));
 app.set("view engine", "ejs");
 
@@ -61,7 +64,7 @@ app.get("/comments/:id/edit", (req, res) =>{
     res.render("comments/edit.ejs", { comment });
 });
 
-app.patch("comments/:id", (req,res) => {
+app.patch("/comments/:id", (req,res) => {
     const { id } = req.params;
     const newCommentText = req.body.comment;
     const foundComment = comments.find(c => c.id === id);
