@@ -53,7 +53,21 @@ app.get("/comments/:id", (req, res) =>{
     const { id } = req.params;
     const comment = comments.find(c => c.id === id);
     res.render("comments/show.ejs", { comment } );
-})
+});
+
+app.get("/comments/:id/edit", (req, res) =>{
+    const { id } = req.params;
+    const comment = comments.find(c => c.id === id);
+    res.render("comments/edit.ejs", { comment });
+});
+
+app.patch("comments/:id", (req,res) => {
+    const { id } = req.params;
+    const newCommentText = req.body.comment;
+    const foundComment = comments.find(c => c.id === id);
+    foundComment.comment = newCommentText;
+    res.redirect("/comments");
+});
 
 app.get("/tacos", (req, res) => {
     res.send("GET /tacos response!!");
