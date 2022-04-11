@@ -1,18 +1,24 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-     <h1>DOISH</h1>
+<%- include("partials/head")%>
 
-     <h2>My To Do list(s):</h2>
+    <%- include('partials/navbar')%>
 
-     <ul>
-         <li><a href="/comments">Daily</a></li>
-     </ul>
-</body>
-</html>
+        <div class="container pt-2">
+            <div class="row">
+                <div class="col-1"></div>
+                <div class="col-10">
+                    <h1>DOISH</h1>
+
+                    <h2>My To Do list(s):</h2>
+
+                    <ul class="list-group">
+                        <li class="list-group-item"><a href="/comments">Daily</a></li>
+                    </ul>
+                </div>
+                <div class="col-1"></div>
+            </div>
+
+        </div>
+
+
+
+<%- include('partials/footer')%>

@@ -1,0 +1,42 @@
+body {
+    background-color: #f7ede2;
+    font-family: 'Mitr', sans-serif;
+    font-size: 1.5rem;
+}
+
+h1 {
+    color: #f28482;
+    font-size: 3rem;
+    font-weight: bolder;
+
+    text-shadow: 2px 2px black
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+ul {
+    list-style-type: none;
+}
+
+nav {
+    background-color: #84a59d;
+}
+
+footer {
+    background-color: #84a59d !important;
+}
+
+
+
+.brand {
+    font-weight: bold;
+}
+
+a:hover {
+    font-weight: 600;
+    color: black;
+    text-shadow: 2px 2px 4px white;
+}
