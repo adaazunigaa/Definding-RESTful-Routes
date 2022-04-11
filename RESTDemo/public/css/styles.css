@@ -32,7 +32,13 @@ footer {
 
 
 .brand {
-    font-weight: bold;
+    font-weight: 600;
+    font-size: 1.5rem;
+}
+
+.costBorder {
+    border-radius: 5%;
+    border: #84a59d 2px dotted;
 }
 
 a:hover {

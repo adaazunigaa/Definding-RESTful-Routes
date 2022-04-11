@@ -18,14 +18,12 @@ let comments = [
     {
         id: uuid(),
         username: "High Priority",
-        comment: "Workout",
-        checked: true
+        comment: "Workout"
     },
     {
         id: uuid(),
         username: "Medium Priority",
-        comment: "Read for 20 min",
-        checked: false
+        comment: "Read for 20 min"
     },
     {
         id: uuid(),

@@ -1,31 +1,47 @@
-<!DOCTYPE html>
-<html lang="en">
+<%- include("../partials/head")%>
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
+    <%- include('../partials/navbar')%>
 
-<body>
-    <h1>Daily</h1>
-    <ul>
-        <% for (let c of comments) {%>
-            <li>
-                <%= c.comment %> <span>&#10513;</span>
-                    <b>
-                        <%= c.username %>
-                    </b>
-                    <br>
-                    <a href="/comments/<%= c.id %>">Details</a>
-            </li>
-        <% } %>
-    </ul>
+        <div class="container pt-2">
+            <div class="row">
+                <div class="col-1"></div>
+                <div class="col-10 ">
+                    <h1>Daily</h1>
+                    <ul class="list-group pt-1">
+                        <% for (let c of comments) {%>
+                            <li class="list-group-item">
+                                <%= c.comment %> <span>&#10513;</span>
+                                    <b>
+                                        <%= c.username %>
+                                    </b>
+                                    <br>
+                                    <a href="/comments/<%= c.id %>">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                            fill="currentColor" class="bi bi-pen" viewBox="0 0 16 16">
+                                            <path
+                                                d="m13.498.795.149-.149a1.207 1.207 0 1 1 1.707 1.708l-.149.148a1.5 1.5 0 0 1-.059 2.059L4.854 14.854a.5.5 0 0 1-.233.131l-4 1a.5.5 0 0 1-.606-.606l1-4a.5.5 0 0 1 .131-.232l9.642-9.642a.5.5 0 0 0-.642.056L6.854 4.854a.5.5 0 1 1-.708-.708L9.44.854A1.5 1.5 0 0 1 11.5.796a1.5 1.5 0 0 1 1.998-.001zm-.644.766a.5.5 0 0 0-.707 0L1.95 11.756l-.764 3.057 3.057-.764L14.44 3.854a.5.5 0 0 0 0-.708l-1.585-1.585z" />
+                                        </svg>
+                            </li>
+                            <% } %>
+                    </ul>
 
-    <a href="/comments/new">Add to do</a>
-    <a href="/">Home</a>
+                    <div class="d-flex  align-items-end justify-content-end pt-5 ">
+                        <a class="mx-3 p0 costBorder" href="/comments/new">Add to do</a>
 
-</body>
+                        <a class="costBorder" href="/">Home</a>
+                    </div>
 
-</html>
+
+                </div>
+                <div class="col-1"></div>
+
+
+
+            </div>
+
+        </div>
+
+
+
+
+        <%- include('../partials/footer')%>
