@@ -16,26 +16,31 @@ app.set("view engine", "ejs");
 let comments = [
     {
         id: uuid(),
-        username: "Tod",
-        comment: "lol that is so funny"
+        username: "High Priority",
+        comment: "Workout",
+        checked: true
     },
     {
         id: uuid(),
-        username: "Sky",
-        comment: "I love dogs"
+        username: "Medium Priority",
+        comment: "Read for 20 min",
+        checked: false
     },
     {
         id: uuid(),
-        username: "sk8erBoyy",
-        comment: "Pls delete that... so boring"
+        username: "Low priority",
+        comment: "Organize/clean up computer desktop"
     },
     {
         id: uuid(),
-        username: "IsyaWoofWoof",
-        comment: "woOf woOf woOf woOf!!"
+        username: "On Standby",
+        comment: "Laundry"
     },
 ];
 
+app.get("/", (req,res) =>{
+    res.render("home.ejs")
+});
 
 app.get("/comments", (req, res) => {
     res.render("comments/index.ejs", {comments});

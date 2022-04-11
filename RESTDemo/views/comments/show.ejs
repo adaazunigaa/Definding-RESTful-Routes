@@ -10,14 +10,14 @@
 
 <body>
 
-    <h1>Comment id: <%= comment.id %>
+    <h1>To do id: <%= comment.id %>
     </h1>
     <p>
         <%= comment.comment %> - <%= comment.username %>
     </p>
 
-    <a href="/comments">Back to index</a>
-    <a href="/comments/<%= comment.id %>/edit">Edit comment</a>
+    <a href="/comments">Back to list</a>
+    <a href="/comments/<%= comment.id %>/edit">Edit to do</a>
 
     <form method="POST" action="/comments/<%= comment.id %>?_method=DELETE">
         <button>Delete</button>

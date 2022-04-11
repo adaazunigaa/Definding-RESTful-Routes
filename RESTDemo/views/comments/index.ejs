@@ -9,19 +9,22 @@
 </head>
 
 <body>
-    <h1>hello</h1>
+    <h1>Daily</h1>
     <ul>
         <% for (let c of comments) {%>
             <li>
-                <%= c.comment %> - <b>
+                <%= c.comment %> <span>&#10513;</span>
+                    <b>
                         <%= c.username %>
                     </b>
-                    <a href="/comments/<%= c.id %>">details</a>
+                    <br>
+                    <a href="/comments/<%= c.id %>">Details</a>
             </li>
         <% } %>
     </ul>
 
-    <a href="/comments/new">Add comment</a>
+    <a href="/comments/new">Add to do</a>
+    <a href="/">Home</a>
 
 </body>
 
