@@ -38,7 +38,20 @@ footer {
 
 .costBorder {
     border-radius: 5%;
-    border: #84a59d 2px dotted;
+    border: #84a59d 2.1px dotted;
+    box-shadow: 5px 5px;
+
+}
+
+.costBorder:hover{
+    box-shadow: 1px 1px;
+    border-radius: 2%;
+    border: #84a59d 1px dotted;
+}
+
+.editHover:hover{
+    text-shadow: 2px 2px 4px #84a59d;
+    color:#f28482;
 }
 
 a:hover {
