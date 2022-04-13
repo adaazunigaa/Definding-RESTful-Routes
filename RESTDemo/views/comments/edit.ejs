@@ -6,20 +6,35 @@
             <div class="row d-flex justify-content-center">
                 <div class="col-1"></div>
                 <div class="col-10">
-                    <h1>Edit </h1>
-                    <div class="d-flex  justify-content-center pb-3">
-                        <form class="pt-2" method="POST"
-                        action="/comments/<%= comment.id %>?_method=PATCH">
-                        <textarea name="comment" id="" cols="30" rows="10"><%= comment.comment %> </textarea>
-                        <br>
-                        <button class="costBorder ">Save</button>
-                    </form>
-                    </div>
+                    <h1 class="pt-2">Edit </h1>
                     
+                    <div class="d-flex  justify-content-center pb-3">
+                        <form class="pt-2" method="POST" action="/comments/<%= comment.id %>?_method=PATCH">
+                            <textarea name="comment" id="" cols="30" rows="10"><%= comment.comment %> </textarea>
+
+                            <br>
+                            <label for="username">Enter a priority level:</label>
+                            <select name="username" id="username" selected="On Standby">
+                                <option value="High Priority" <%=( comment.username==="High Priority" ) ? "SELECTED"
+                                    : "" %>>High Priority</option>
+                                <option value="Medium Priority" <%=( comment.username==="Medium Priority" ) ? "SELECTED"
+                                    : "" %>>Medium Priority</option>
+                                <option value="Low priority" <%=( comment.username==="Low priority" ) ? "SELECTED" : ""
+                                    %>>Low priority</option>
+                                <option value="On Standby" <%=( comment.username==="On Standby" ) ? "SELECTED" : "" %>
+                                    >On Standby</option>
+                            </select>
+
+                            <br>
+
+                            <button class="costBorder ">Save</button>
+                        </form>
+                    </div>
 
 
 
-                   
+
+
 
                     <div class="d-flex  align-items-end justify-content-end pt-5 ">
                         <a class="costBorder" href="/comments">Back to to do list</a>
