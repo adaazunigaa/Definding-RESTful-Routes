@@ -2,21 +2,29 @@
 
     <%- include('../partials/navbar')%>
 
-        <div class="container">
+        <div class="container pt-2">
             <div class="row d-flex justify-content-center">
                 <div class="col-1"></div>
                 <div class="col-10">
                     <h1>Edit </h1>
-                    <form class="justify-content-cente" method="POST" action="/comments/<%= comment.id %>?_method=PATCH">
+                    <div class="d-flex  justify-content-center pb-3">
+                        <form class="pt-2" method="POST"
+                        action="/comments/<%= comment.id %>?_method=PATCH">
                         <textarea name="comment" id="" cols="30" rows="10"><%= comment.comment %> </textarea>
                         <br>
-                        <button>Save</button>
+                        <button class="costBorder ">Save</button>
                     </form>
+                    </div>
+                    
 
 
 
-                    <br>
-                    <a href="/comments">Back to index</a>
+                   
+
+                    <div class="d-flex  align-items-end justify-content-end pt-5 ">
+                        <a class="costBorder" href="/comments">Back to to do list</a>
+                    </div>
+
                 </div>
                 <div class="col-1"></div>
             </div>

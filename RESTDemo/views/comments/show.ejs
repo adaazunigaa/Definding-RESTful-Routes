@@ -1,27 +1,53 @@
-<!DOCTYPE html>
-<html lang="en">
+<%- include("../partials/head")%>
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Show</title>
-</head>
+    <%- include('../partials/navbar')%>
+        <div class="container pt-2">
+            <div class="row">
+                <div class="col-1"></div>
+                <div class="col-10">
 
-<body>
 
-    <h1>To do id: <%= comment.id %>
-    </h1>
-    <p>
-        <%= comment.comment %> - <%= comment.username %>
-    </p>
 
-    <a href="/comments">Back to list</a>
-    <a href="/comments/<%= comment.id %>/edit">Edit to do</a>
+                    <h1 class="pt-2">
+                        <%= comment.comment %> - <%= comment.username %>
+                    </h1>
 
-    <form method="POST" action="/comments/<%= comment.id %>?_method=DELETE">
-        <button>Delete</button>
-    </form>
-</body>
+                    <ul>
+                        <li>To do id#: <%= comment.id %></li>
+                        <li>
+                            <label for="username">Enter a priority level:</label>
+                            <select name="username" id="username" selected="On Standby">
+                                <option value="High Priority">High Priority</option>
+                                <option value="Medium Priority" <%=( comment.username==="Medium Priority" ) ? "SELECTED"
+                                    : "" %>>Medium Priority</option>
+                                <option value="Low priority">Low priority</option>
+                                <option value="On Standby">On Standby</option>
+                            </select>
+                        </li>
+                    </ul>
 
-</html>
+
+
+
+                    <div>
+                        <form method="POST" action="/comments/<%= comment.id %>?_method=DELETE">
+                                            <button class="">Delete</button>
+                                        </form>
+                    </div>
+                   
+
+
+                    <hr>
+                    <div class="d-flex  align-items-end justify-content-end pt-5 ">
+                        <a class="costBorder mx-3" href="/comments">Back to list</a>
+                        <a class="costBorder" href="/comments/<%= comment.id %>/edit">Edit to do</a>
+                    </div>
+
+
+                </div>
+                <div class="col-1"></div>
+            </div>
+        </div>
+
+
+        <%- include('../partials/footer')%>
