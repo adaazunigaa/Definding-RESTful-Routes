@@ -1,15 +1,16 @@
 body {
     background-color: #f7ede2;
     font-family: 'Mitr', sans-serif;
-    font-size: 1.5rem;
+    font-size: 1rem;
 }
-button{
+
+button {
     border: none;
 }
 
 h1 {
     color: #f28482;
-    font-size: 3rem;
+    font-size: 1.2rem;
     font-weight: bolder;
     text-shadow: 2px 2px black
 }
@@ -45,7 +46,7 @@ footer {
 
 }
 
-.costBorder:hover{
+.costBorder:hover {
     box-shadow: 1px 1px;
     border-radius: 2%;
     border: 2.1;
@@ -53,9 +54,9 @@ footer {
 
 }
 
-.editHover:hover{
+.editHover:hover {
     text-shadow: 2px 2px 4px #84a59d;
-    color:#84a59d;
+    color: #84a59d;
 }
 
 a:hover {
@@ -63,3 +64,34 @@ a:hover {
     color: black;
     text-shadow: 2px 2px 4px white;
 }
+
+
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+    body {
+        font-size: 1.2rem;
+    }
+    h1{
+        font-size: 1.3rem;
+    }
+}
+
+/* /* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+    body {
+        font-size: 2rem;
+    }
+    h1{
+        font-size: 1.8rem;
+    }
+}
+
+@media (min-width: 1200px) { 
+    body{
+        font-size: 1.5rem;
+    }
+    h1{
+        font-size: 3rem;
+    }
+ }
