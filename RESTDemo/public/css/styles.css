@@ -47,6 +47,7 @@ footer {
     box-shadow: 1px 1px;
     border-radius: 2%;
     border: #84a59d 1px dotted;
+    text-decoration: none;
 }
 
 .editHover:hover{
