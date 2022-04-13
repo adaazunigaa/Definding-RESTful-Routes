@@ -71,21 +71,26 @@ app.get("/comments/:id/edit", (req, res) =>{
 app.patch("/comments/:id", (req,res) => {
     const { id } = req.params;
     const newCommentText = req.body.comment;
-    const foundComment = comments.find(c => c.id === id);
-    foundComment.comment = newCommentText;
-    res.redirect("/comments");
-});
+    const newUsername = req.body.username;
 
-app.get("/tacos", (req, res) => {
-    res.send("GET /tacos response!!");
+    const foundComment = comments.find(c => c.id === id);
+
+
+    foundComment.comment = newCommentText;
+    foundComment.username = newUsername;
+
+    res.redirect("/comments");
 });
 
 app.delete("/comments/:id", (req, res) => {
     const { id } = req.params;
     comments = comments.filter(c => c.id !== id);
     res.redirect('/comments');
-})
+});
 
+app.get("/tacos", (req, res) => {
+    res.send("GET /tacos response!!");
+});
 
 app.post("/tacos", (req, res) => {
     const { qty, meat } = req.body;

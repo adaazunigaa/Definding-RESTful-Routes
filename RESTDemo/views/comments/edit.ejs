@@ -6,8 +6,7 @@
             <div class="row d-flex justify-content-center">
                 <div class="col-1"></div>
                 <div class="col-10">
-                    <h1 class="pt-2">Edit </h1>
-                    
+                    <h1>Edit </h1>
                     <div class="d-flex  justify-content-center pb-3">
                         <form class="pt-2" method="POST" action="/comments/<%= comment.id %>?_method=PATCH">
                             <textarea name="comment" id="" cols="30" rows="10"><%= comment.comment %> </textarea>
