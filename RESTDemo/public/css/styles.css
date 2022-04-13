@@ -3,12 +3,14 @@ body {
     font-family: 'Mitr', sans-serif;
     font-size: 1.5rem;
 }
+button{
+    border: none;
+}
 
 h1 {
     color: #f28482;
     font-size: 3rem;
     font-weight: bolder;
-
     text-shadow: 2px 2px black
 }
 
@@ -46,8 +48,9 @@ footer {
 .costBorder:hover{
     box-shadow: 1px 1px;
     border-radius: 2%;
-    border: #84a59d 1px dotted;
+    border: 2.1;
     text-decoration: none;
+
 }
 
 .editHover:hover{

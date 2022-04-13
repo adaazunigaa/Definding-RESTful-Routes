@@ -1,43 +1,54 @@
-<!DOCTYPE html>
-<html lang="en">
+<%- include("../partials/head")%>
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>New comment</title>
-</head>
+    <%- include('../partials/navbar')%>
 
-<body>
-    <h1>Add to do:</h1>
+        <div class="container">
+            <div class="row">
+                <div class="col-1"></div>
+                <div class="col-10">
+                    <h1>Add to do:</h1>
 
-    <form action="/comments" method="post">
-        <!-- <section>
+
+                    <div class="d-flex  justify-content-center pb-3">
+                        <form action="/comments" method="post">
+                            <!-- <section>
             <label for="username">Enter priority level</label>
             <input type="text" id="username" placeholder="user name" name="username">
         </section> -->
 
-        <section>
-            <label for="username">Enter a priority level:</label>
-            <br>
-            <select name="username" id="username">
-                <option value="High Priority">High Priority</option>
-                <option value="Medium Priority">Medium Priority</option>
-                <option value="Low priority">Low priority</option>
-                <option value="On Standby">On Standby</option>
-            </select>
-        </section>
+                            <section>
+                                <label for="username">Priority level:</label>
+                                <br>
+                                <select name="username" id="username">
+                                    <option value="High Priority">High Priority</option>
+                                    <option value="Medium Priority">Medium Priority</option>
+                                    <option value="Low priority">Low priority</option>
+                                    <option value="On Standby">On Standby</option>
+                                </select>
+                            </section>
 
-        <section>
-            <label for="comment">Your next to do</label> <br>
-            <textarea name="comment" id="comment" cols="30" rows="5"></textarea>
-        </section>
+                            <section>
+                                <label for="comment">My new to do is:</label> <br>
+                                <textarea name="comment" id="comment" cols="30" rows="5"></textarea>
+                            </section>
 
-        <button>Submit</button>
+                            <div class="d-flex  justify-content-center">
+                                <button class="costBorder">Submit</button>
+                            </div>
+                            
 
-    </form>
+                        </form>
+                    </div>
 
-    <a href="/comments">Back to index</a>
-</body>
+                    <div class="d-flex align-items-end justify-content-end pt-5 ">
+                        <a class="costBorder" href="/comments">Back to list</a>
+                    </div>
+                    
+                </div>
+                <div class="col-1"></div>
+            </div>
+        </div>
 
-</html>
+
+
+        <%- include('../partials/footer')%>

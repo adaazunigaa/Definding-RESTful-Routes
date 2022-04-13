@@ -24,17 +24,6 @@
                         </li>
                         <li class="list-group-item">
                             <%= comment.username %>
-                                <!-- <label for="username">Enter a priority level:</label>
-                            <select name="username" id="username" selected="On Standby">
-                                <option value="High Priority" <%=( comment.username==="High Priority" ) ? "SELECTED"
-                                : "" %>>High Priority</option>
-                                <option value="Medium Priority" <%=( comment.username==="Medium Priority" ) ? "SELECTED"
-                                    : "" %>>Medium Priority</option>
-                                <option value="Low priority" <%=( comment.username==="Low priority" ) ? "SELECTED"
-                                : "" %>>Low priority</option>
-                                <option value="On Standby" <%=( comment.username==="On Standby" ) ? "SELECTED"
-                                : "" %>>On Standby</option>
-                            </select> -->
                         </li>
 
                         <li class="list-group-item">
@@ -45,7 +34,7 @@
                         <li class="list-group-item">
                             <div class="d-flex  align-items-end justify-content-end ">
                                 <form method="POST" action="/comments/<%= comment.id %>?_method=DELETE">
-                                    <button class="button">Delete</button>
+                                    <button class="costBorder">Delete</button>
                                 </form>
                             </div>
                         </li>
