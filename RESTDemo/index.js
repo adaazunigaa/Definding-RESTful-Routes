@@ -41,34 +41,34 @@ app.get("/", (req,res) =>{
     res.render("home.ejs")
 });
 
-app.get("/comments", (req, res) => {
+app.get("/daily", (req, res) => {
     res.render("comments/index.ejs", {comments});
 });
 
-app.get("/comments/new", (req, res)=>{
+app.get("/daily/new", (req, res)=>{
     res.render("comments/new.ejs");
 });
 
-app.post("/comments", (req,res) => {
+app.post("/daily", (req,res) => {
      console.log(req.body);
     const {username, comment} = req.body;
     comments.push({username, comment, id: uuid()});
-    res.redirect("/comments");
+    res.redirect("/daily");
 });
 
-app.get("/comments/:id", (req, res) =>{
+app.get("/daily/:id", (req, res) =>{
     const { id } = req.params;
     const comment = comments.find(c => c.id === id);
     res.render("comments/show.ejs", { comment } );
 });
 
-app.get("/comments/:id/edit", (req, res) =>{
+app.get("/daily/:id/edit", (req, res) =>{
     const { id } = req.params;
     const comment = comments.find(c => c.id === id);
     res.render("comments/edit.ejs", { comment });
 });
 
-app.patch("/comments/:id", (req,res) => {
+app.patch("/daily/:id", (req,res) => {
     const { id } = req.params;
     const newCommentText = req.body.comment;
     const newUsername = req.body.username;
@@ -79,24 +79,24 @@ app.patch("/comments/:id", (req,res) => {
     foundComment.comment = newCommentText;
     foundComment.username = newUsername;
 
-    res.redirect("/comments");
+    res.redirect("/daily");
 });
 
-app.delete("/comments/:id", (req, res) => {
+app.delete("/daily/:id", (req, res) => {
     const { id } = req.params;
     comments = comments.filter(c => c.id !== id);
-    res.redirect('/comments');
+    res.redirect('/daily');
 });
 
-app.get("/tacos", (req, res) => {
-    res.send("GET /tacos response!!");
-});
+// app.get("/tacos", (req, res) => {
+//     res.send("GET /tacos response!!");
+// });
 
-app.post("/tacos", (req, res) => {
-    const { qty, meat } = req.body;
-    res.send("This is the POST  /tacos response!! " +
-        `<p>You ordered <b>${qty} ${meat}</b> tacos</p>`);
-});
+// app.post("/tacos", (req, res) => {
+//     const { qty, meat } = req.body;
+//     res.send("This is the POST  /tacos response!! " +
+//         `<p>You ordered <b>${qty} ${meat}</b> tacos</p>`);
+// });
 
 
 

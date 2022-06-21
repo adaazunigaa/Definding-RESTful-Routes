@@ -28,12 +28,12 @@
 
                         <li class="list-group-item">
                             <div class="d-flex  justify-content-center">
-                                <a class="costBorder" href="/comments/<%= comment.id %>/edit">Edit to do</a>
+                                <a class="costBorder" href="/daily/<%= comment.id %>/edit">Edit to do</a>
                             </div>
                         </li>
                         <li class="list-group-item">
                             <div class="d-flex  align-items-end justify-content-end ">
-                                <form method="POST" action="/comments/<%= comment.id %>?_method=DELETE">
+                                <form method="POST" action="/daily/<%= comment.id %>?_method=DELETE">
                                     <button class="costBorder">Delete</button>
                                 </form>
                             </div>
@@ -41,7 +41,7 @@
                     </ul>
 
                     <div class="d-flex align-items-end justify-content-end pt-5 ">
-                        <a class="costBorder mx-3" href="/comments">Back to list</a>
+                        <a class="costBorder mx-3" href="/daily">Back to list</a>
                     </div>
 
 

@@ -8,7 +8,7 @@
                 <div class="col-10">
                     <h1>Edit </h1>
                     <div class="d-flex  justify-content-center pb-3">
-                        <form class="pt-2" method="POST" action="/comments/<%= comment.id %>?_method=PATCH">
+                        <form class="pt-2" method="POST" action="/daily/<%= comment.id %>?_method=PATCH">
                             <textarea name="comment" id="" cols="30" rows="10"><%= comment.comment %> </textarea>
 
                             <br>
@@ -36,7 +36,7 @@
 
 
                     <div class="d-flex  align-items-end justify-content-end pt-5 ">
-                        <a class="costBorder" href="/comments">Back to to do list</a>
+                        <a class="costBorder" href="/daily">Back to to do list</a>
                     </div>
 
                 </div>
